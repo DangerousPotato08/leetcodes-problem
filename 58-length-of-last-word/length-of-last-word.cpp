@@ -6,15 +6,13 @@ public:
         int count = 0;
         int i = 0;
 
-        // Count the number of words
         while (i < s.length()) {
 
-            // Skip spaces
             while (i < s.length() && s[i] == ' ') {
                 i++;
             }
 
-            // If a word is found
+           
             if (i < s.length()) {
                 count++;
 
@@ -25,20 +23,16 @@ public:
             }
         }
 
-        // Create a vector to store words
         vector<string> arr(count);
 
         int cursor = 0;
 
-        // Store each word
         for (int j = 0; j < count; j++) {
 
-            // Skip spaces
             while (cursor < s.length() && s[cursor] == ' ') {
                 cursor++;
             }
 
-            // Store characters of the word
             while (cursor < s.length() && s[cursor] != ' ') {
 
                 arr[j] += s[cursor];
@@ -46,7 +40,7 @@ public:
             }
         }
 
-        // Find the last word
+
         for (int j = count - 1; j >= 0; j--) {
 
             if (arr[j] != "") {
